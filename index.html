@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Multi-step form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Multi-step form</title>
 
-  <!-- Sidebar start -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="sidebar--container">
+      <div class="btn--container flex">
+        <button class="btn--sidebar">1</button>
+        <button class="btn--sidebar">2</button>
+        <button class="btn--sidebar">3</button>
+        <button class="btn--sidebar">4</button>
+      </div>
+    </aside>
+    <main class="flex">
+      <form action="#" class="flex">
+        <h2>Personal info</h2>
+        <p>Please provide your name, email address, and phone number.</p>
+        <label for="name">Name</label>
+        <input type="text" placeholder="e.g. Stephen King" id="name" />
+        <label for="email-address">Email Address</label>
+        <input
+          type="email"
+          placeholder="e.g. Stephenking@lorem.com"
+          id="email-address"
+        />
+        <label for="phone-number">Phone Number</label>
+        <input type="number" placeholder="e.g. +1 234 567 890" />
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
 
-  Step 1
+<!-- Sidebar start -->
+
+<!-- Step 1
   Your info
 
   Step 2
@@ -28,13 +67,13 @@
   Add-ons
 
   Step 4
-  Summary
+  Summary -->
 
-  <!-- Sidebar end -->
+<!-- Sidebar end -->
 
-  <!-- Step 1 start -->
+<!-- Step 1 start -->
 
-  Personal info
+<!-- Personal info
   Please provide your name, email address, and phone number.
 
   Name
@@ -46,13 +85,13 @@
   Phone Number
   e.g. +1 234 567 890
 
-  Next Step
+  Next Step -->
 
-  <!-- Step 1 end -->
+<!-- Step 1 end -->
 
-  <!-- Step 2 start -->
+<!-- Step 2 start -->
 
-  Select your plan
+<!-- Select your plan
   You have the option of monthly or yearly billing.
 
   Arcade
@@ -68,13 +107,13 @@
   Yearly
 
   Go Back
-  Next Step
+  Next Step -->
 
-  <!-- Step 2 end -->
+<!-- Step 2 end -->
 
-  <!-- Step 3 start -->
+<!-- Step 3 start -->
 
-  Pick add-ons
+<!-- Pick add-ons
   Add-ons help enhance your gaming experience.
 
   Online service
@@ -90,37 +129,30 @@
   +$2/mo
 
   Go Back
-  Next Step
+  Next Step -->
 
-  <!-- Step 3 end -->
+<!-- Step 3 end -->
 
-  <!-- Step 4 start -->
+<!-- Step 4 start -->
 
-  Finishing up
-  Double-check everything looks OK before confirming.
+<!-- Finishing up
+  Double-check everything looks OK before confirming. -->
 
-  <!-- Dynamically add subscription and add-on selections here -->
+<!-- Dynamically add subscription and add-on selections here -->
 
-  Total (per month/year)
+<!-- Total (per month/year)
 
   Go Back
-  Confirm
+  Confirm -->
 
-  <!-- Step 4 end -->
+<!-- Step 4 end -->
 
-  <!-- Step 5 start -->
+<!-- Step 5 start -->
 
-  Thank you!
+<!-- Thank you!
 
   Thanks for confirming your subscription! We hope you have fun 
   using our platform. If you ever need support, please feel free 
   to email us at support@loremgaming.com.
 
-  <!-- Step 5 end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-</html>
+  Step 5 end -->
