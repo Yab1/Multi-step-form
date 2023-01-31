@@ -28,17 +28,20 @@
   </head>
   <body>
     <aside class="sidebar--container">
-      <div class="btn--container flex">
-        <button class="btn--sidebar">1</button>
-        <button class="btn--sidebar">2</button>
-        <button class="btn--sidebar">3</button>
-        <button class="btn--sidebar">4</button>
+      <div class="step--container flex">
+        <span class="step step-active flex">1</span>
+        <span class="step flex">2</span>
+        <span class="step flex">3</span>
+        <span class="step flex">4</span>
       </div>
     </aside>
+
     <main class="flex">
-      <form action="#" class="flex">
+      <form action="#" class="flex hidden">
         <h2>Personal info</h2>
-        <p>Please provide your name, email address, and phone number.</p>
+        <p class="description">
+          Please provide your name, email address, and phone number.
+        </p>
         <label for="name">Name</label>
         <input type="text" placeholder="e.g. Stephen King" id="name" />
         <label for="email-address">Email Address</label>
@@ -50,8 +53,60 @@
         <label for="phone-number">Phone Number</label>
         <input type="number" placeholder="e.g. +1 234 567 890" />
       </form>
+      <!-- Form-------------#2 -->
+      <form action="#" class="flex">
+        <h2>Select your plan</h2>
+        <p class="description">
+          You have the option of monthly or yearly billing
+        </p>
+        <div class="plan--container flex">
+          <div class="plan flex">
+            <picture>
+              <img class="plan--icon" src="./assets/images/icon-arcade.svg"></img>
+            </picture>
+            <div class="plan--info flex">
+              <span class="plan--name">Arcade</span>
+              <span class="plan--price">$90/yr</span>
+              <span class="plan--free">2 months free</span>
+            </div>
+          </div>
+          <div class="plan flex">
+            <picture>
+              <img class="plan--icon" src="./assets/images/icon-advanced.svg"></img>
+            </picture>
+            <div class="plan--info flex">
+              <span class="plan--name">Advanced</span>
+              <span class="plan--price">$120/yr</span>
+              <span class="plan--free">2 months free</span>
+            </div>
+          </div>
+          <div class="plan flex">
+            <picture>
+              <img class="plan--icon" src="./assets/images/icon-pro.svg"></img>
+            </picture>
+            <div class="plan--info flex">
+              <span class="plan--name">Pro</span>
+              <span class="plan--price">$150/yr</span>
+              <span class="plan--free">2 months free</span>
+            </div>
+          </div>
+        </div>
+        <div class="plan--selector--container flex">
+          <span class="plan--month selected--billing--plan">Monthly</span>
+          <div class="plan--switcher flex">
+            <div class="plan--circle"></div>
+          </div>
+          <span class="plan-year">Year</span>
+        </div>
+      </form>
     </main>
-    <script src="script.js"></script>
+
+    <footer class="submit-btn-container flex">
+      <button class="btn--go-back">Go Back</button>
+      <button class="btn--next">Next Step</button>
+    </footer>
+
+    <script type="module" src="script.js"></script>
   </body>
 </html>
 

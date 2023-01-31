@@ -1,105 +1,214 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
-:root{
-    --Marine_blue: hsl(213, 96%, 18%);
-    --Purplish_blue: hsl(243, 100%, 62%);
-    --Pastel_blue: hsl(228, 100%, 84%);
-    --Light_blue: hsl(206, 94%, 87%);
-    --Strawberry_red: hsl(354, 84%, 57%);   
-    --Cool_gray: hsl(231, 11%, 63%);
-    --Light_gray: hsl(229, 24%, 87%);
-    --Magnolia: hsl(217, 100%, 97%);
-    --Alabaster: hsl(231, 100%, 99%);
-    --White: hsl(0, 0%, 100%);
+:root {
+  --Marine_blue: hsl(213, 96%, 18%);
+  --Purplish_blue: hsl(243, 100%, 62%);
+  --Pastel_blue: hsl(228, 100%, 84%);
+  --Light_blue: hsl(206, 94%, 87%);
+  --Strawberry_red: hsl(354, 84%, 57%);
+  --Cool_gray: hsl(231, 11%, 63%);
+  --Light_gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(214, 30%, 95%);
+  --Alabaster: hsl(228, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
 }
 
-html{
-    width: 100%;
-    height: 100%;
+/* basic */
+html {
+  width: 100%;
+  height: 100%;
 }
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
-.grid{
-    display: grid;
+.grid {
+  display: grid;
 }
-body{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
-    width: 100%;
-    height: 100vh;
+body {
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
 }
-/* main */
-main{
-    position: absolute;
-    top: 6em;
-    left: 38%;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--Magnolia);
-}
-form{
-    background-color: var(--White);
-    flex-direction: column;
-    width: 18em;
-    padding: 1.5em;
-    border-radius: .7em;
-}
-h2{
-    color: var(--Marine_blue);
-    font-weight: 700;
-    margin-bottom: .8em;
-}
-p{
-    font-weight: 400;
-    color: var(--Cool_gray);
-    margin-bottom: 1.5em;
 
-}
-label{
-    font-size: .9rem;
-    font-weight: 400;
-    color: var(--Marine_blue);
-}
-input{
-    background: none;
-    color: var(--Cool_gray);
-    font-weight: 400;
-    font-size: 1rem;
-    border: solid .1em var(--Cool_gray);
-    border-radius: .2em;
-    padding: .8em;
-    margin-bottom: 1em;
-}
 /* sidebar */
-.sidebar--container{
-    background-image: url(assets/images/bg-sidebar-mobile.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    height: 10em;
+.sidebar--container {
+  background-image: url(assets/images/bg-sidebar-mobile.svg);
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  width: 100%;
+  height: 100%;
+  height: 10em;
 }
-.btn--container{
-    justify-content: center;
-    padding: 1em;
-    gap: 1em;
+.step--container {
+  justify-content: center;
+  padding: 1em;
+  gap: 1em;
 }
-.btn--sidebar{
-    background: none;
-    border: solid .1em var(--White);
-    border-radius: 50%;
-    width: 2.5em;
-    aspect-ratio: 1/1;
-    font-weight: 700;
-    color: var(--White);
+.step {
+  border: solid 0.1em var(--White);
+  border-radius: 50%;
+  width: 2em;
+  aspect-ratio: 1/1;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  color: var(--White);
 }
-.btn--sidebar:hover{
-    background-color: var(--Light_blue);
-    color: var(--Marine_blue);
+.step-active {
+  background-color: var(--Light_blue);
+  color: var(--Marine_blue);
+}
+
+/* main */
+main {
+  justify-content: center;
+  align-items: center;
+  height: 27em;
+  background-color: var(--Magnolia);
+}
+form {
+  background-color: var(--White);
+  flex-direction: column;
+  position: absolute;
+  top: 6em;
+  width: 18em;
+  padding: 1em 1.5em;
+  border-radius: 0.7em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px 0px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px 0px;
+}
+h2 {
+  color: var(--Marine_blue);
+  font-weight: 700;
+  margin-bottom: 0.8em;
+}
+.description {
+  font-weight: 400;
+  color: var(--Cool_gray);
+  margin-bottom: 1.5em;
+}
+label {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--Marine_blue);
+}
+.hidden {
+  display: none;
+}
+input {
+  background: none;
+  color: var(--Cool_gray);
+  font-weight: 400;
+  font-size: 1rem;
+  border: solid 0.1em var(--Cool_gray);
+  border-radius: 0.2em;
+  padding: 0.8em;
+  margin-bottom: 1em;
+}
+
+/* footer */
+footer {
+  background-color: var(--White);
+  justify-content: space-between;
+  padding: 1em;
+}
+.btn--go-back {
+  background-color: var(--White);
+  color: var(--Cool_gray);
+  font-weight: 700;
+  padding: 1em;
+  width: 7.6em;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+.btn--next {
+  background-color: var(--Marine_blue);
+  color: var(--White);
+  font-weight: 700;
+  padding: 1em;
+  width: 7.6em;
+  border: none;
+  border-radius: 0.3em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px 0px;
+  cursor: pointer;
+}
+
+/* Step #2 - Middle */
+
+.plan--container {
+  flex-direction: column;
+  gap: 0.8em;
+}
+.plan {
+  padding: 0.8em;
+  gap: 1em;
+  border-radius: 0.7em;
+  border: 0.1em solid var(--Cool_gray);
+}
+.selected--plan {
+  border: 0.1em solid var(--Purplish_blue);
+  background-color: var(--Alabaster);
+}
+.plan--icon {
+  width: 43px;
+  aspect-ratio: 1/1;
+}
+.plan--info {
+  flex-direction: column;
+  gap: 0.3em;
+}
+.plan--name {
+  color: var(--Marine_blue);
+  font-weight: 500;
+  font-size: 1rem;
+}
+.plan--price {
+  color: var(--Cool_gray);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.plan--free {
+  color: var(--Marine_blue);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+/* Step #2 - bottom */
+.plan--selector--container {
+  justify-content: center;
+  align-items: center;
+  padding: 0.8em;
+  background-color: var(--Alabaster);
+  border-radius: 0.4em;
+  margin-top: 1em;
+  /* box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px 0px; */
+}
+.plan--switcher {
+  align-items: center;
+  background-color: var(--Marine_blue);
+  width: 2.3em;
+  height: 0.9em;
+  padding: 0.2em;
+  border-radius: 2em;
+  margin-inline: 1em;
+}
+.plan--circle {
+  background-color: var(--White);
+  width: 0.8em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.selected--billing--plan {
+  color: var(--Marine_blue);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.unselected--billing--plan {
+  color: var(--Cool_gray);
 }
