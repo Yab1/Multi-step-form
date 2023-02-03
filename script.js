@@ -10,7 +10,10 @@ const nextBtn = qs('.btn--next');
 const prvBtn = qs('.btn--go-back');
 const labels = qsa('label');
 const plans = qsa('.plan');
-console.log(plans);
+const yearOrMonth = qs('.plan--selector--container');
+const planCircle = qs('.plan--circle');
+const planMonth = qs('.plan--month');
+const planYear = qs('.plan--year');
 //Heading 2 text content array
 const data = [
   {
@@ -47,6 +50,12 @@ const action = function (count) {
     labels.forEach((label) => label.classList.remove('hidden'));
   }
 };
+//style
+const selectedBillingPlan = {
+  color: 'var(--Marine_blue)',
+  fontSize: '0.9em',
+  fontWeight: '500',
+};
 //EventListeners
 nextBtn.addEventListener('click', () => {
   if (count < 3) {
@@ -58,5 +67,22 @@ prvBtn.addEventListener('click', () => {
   if (count >= 1) {
     count--;
     action(count);
+  }
+});
+
+console.log(Object.keys(plans));
+
+let month = true;
+yearOrMonth.addEventListener('click', function () {
+  if (!month) {
+    planCircle.classList.remove('plan--circle--align--end');
+    planYear.classList.remove('plan--selected');
+    planMonth.classList.add('plan--selected');
+    month = true;
+  } else {
+    planCircle.classList.add('plan--circle--align--end');
+    planYear.classList.add('plan--selected');
+    planMonth.classList.remove('plan--selected');
+    month = false;
   }
 });

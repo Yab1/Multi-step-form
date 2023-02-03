@@ -187,28 +187,39 @@ footer {
   background-color: var(--Alabaster);
   border-radius: 0.4em;
   margin-top: 1em;
+
   /* box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px 0px; */
 }
 .plan--switcher {
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background-color: var(--Marine_blue);
   width: 2.3em;
   height: 0.9em;
   padding: 0.2em;
   border-radius: 2em;
   margin-inline: 1em;
+  /* justify-content: center; */
 }
 .plan--circle {
   background-color: var(--White);
   width: 0.8em;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  align-items: flex-start;
 }
-.selected--billing--plan {
-  color: var(--Marine_blue);
+.plan--circle--align--end {
+  align-self: flex-end;
+}
+.plan--year,
+.plan--month {
+  color: var(--Cool_gray);
   font-size: 0.9em;
   font-weight: 500;
 }
-.unselected--billing--plan {
-  color: var(--Cool_gray);
+.selected--billing--plan {
+  color: var(--Marine_blue);
+}
+.plan--selected {
+  color: var(--Marine_blue);
 }
